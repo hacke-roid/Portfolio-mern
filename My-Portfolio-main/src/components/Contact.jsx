@@ -16,14 +16,18 @@ const Contact = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    console.log(inputData)
-    axios.post('http://localhost:5500', {
-      name,
-      email,
-      number,
-      subject,
-      message,
-    })
+    console.log(inputData);
+    axios.post(
+      "http://localhost:5500",
+      {
+        name,
+        email,
+        number,
+        subject,
+        message,
+      },
+      { withCredentials: true }
+    );
   };
 
   const handleInputChange = (e) => {
@@ -31,7 +35,7 @@ const Contact = () => {
     setInputData({ ...inputData, [name]: value });
   };
 
-  const { name, email,  number, subject, message } = inputData;
+  const { name, email, number, subject, message } = inputData;
 
   return (
     <div>

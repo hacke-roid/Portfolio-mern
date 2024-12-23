@@ -29,7 +29,7 @@ app.post("/", (req, res) => {
       res.json(data);
     })
     .catch((err) => {
-      res.status(500).json({ error: err.message }); // Handle errors
+      res.status(500).json({ error: err.message });
     });
 });
 
