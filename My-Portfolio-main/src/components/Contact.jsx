@@ -62,6 +62,7 @@ const Contact = () => {
                     name="name"
                     value={name}
                     onChange={handleInputChange}
+                    required
                   />
                 </div>
                 <div>
@@ -71,6 +72,7 @@ const Contact = () => {
                     name="email"
                     value={email}
                     onChange={handleInputChange}
+                    required
                   />
                 </div>
               </div>
@@ -93,6 +95,7 @@ const Contact = () => {
                     name="number"
                     value={number}
                     onChange={handleInputChange}
+                    required
                   />
                 </div>
               </div>
@@ -104,6 +107,7 @@ const Contact = () => {
                     name="subject"
                     value={subject}
                     onChange={handleInputChange}
+                    required
                   />
                 </div>
                 <div>
@@ -112,6 +116,7 @@ const Contact = () => {
                     name="message"
                     value={message}
                     onChange={handleInputChange}
+                    required
                   />
                 </div>
               </div>
