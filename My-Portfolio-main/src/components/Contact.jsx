@@ -17,12 +17,12 @@ const Contact = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     console.log(inputData)
-    axios.post('http://localhost:5500/', {
-      name: name,
-      email: email,
-      number: number,
-      subject: subject,
-      message: message,
+    axios.post('http://localhost:5500', {
+      name,
+      email,
+      number,
+      subject,
+      message,
     })
   };
 
