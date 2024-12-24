@@ -11,6 +11,8 @@ app.use(
       "http://localhost:3000",
       "https://portfolio-mern-rouge.vercel.app",
     ],
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Authorization"],
     credentials: true,
   })
 );
