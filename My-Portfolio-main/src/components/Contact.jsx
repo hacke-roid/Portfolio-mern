@@ -18,7 +18,7 @@ const Contact = () => {
     e.preventDefault();
     console.log(inputData);
     try {
-      let data = await axios.post("http://localhost:5500/", inputData, {
+      let data = await axios.post("https://deploy-mern-server-eight.vercel.app/", inputData, {
         withCredentials: true,
       });
       // console.log("Response:" + data);
