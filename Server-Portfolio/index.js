@@ -9,7 +9,6 @@ const DataModel = require("./Model/data.js");
 app.use(
   cors({
     origin: [
-      "http://localhost:3000",
       "https://portfolio-mern-rouge.vercel.app",
     ],
     credentials: true,
@@ -31,14 +30,6 @@ mongoose
     console.log("Connected to MongoDB");
   });
 
-app.get("/data",async (req, res) => {
-  try {
-    let allData = await DataModel.find();
-    res.json(allData);
-  } catch (err) {
-      res.status(500).json({error: err.message})
-  }
-});
 
 app.post("/", async (req, res) => {
   try {

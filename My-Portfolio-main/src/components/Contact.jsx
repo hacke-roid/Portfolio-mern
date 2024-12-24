@@ -14,14 +14,17 @@ const Contact = () => {
     message: "",
   });
 
+  axios.defaults.withCredentials = true;
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     console.log(inputData);
+    const BASE_URL = process.env.REACT_APP_SERVER_URL;
+    console.log(BASE_URL)
     try {
-      let data = await axios.post("https://deploy-mern-server-eight.vercel.app/", inputData, {
+      let data = await axios.post(`${BASE_URL}`, inputData, {
         withCredentials: true,
       });
-      // console.log("Response:" + data);
+      console.log("Response:" + data);
       alert("Form submitted successfully");
       setInputData({
         name: "",

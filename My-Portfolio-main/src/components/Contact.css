@@ -3,14 +3,6 @@
   background-color: #f2f6f9;
 }
 
-.background-banner {
-  /* Add responsiveness if banner image is added later */
-}
-
-.contact-banner {
-  /* Adjustments for mobile not required as it has commented-out styles */
-}
-
 .details-content {
   width: 100%;
   display: flex;
