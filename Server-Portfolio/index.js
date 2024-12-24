@@ -9,11 +9,14 @@ const DataModel = require("./Model/data.js");
 app.use(
   cors({
     origin: [
+      "http://localhost:3000",
       "https://portfolio-mern-rouge.vercel.app",
     ],
     credentials: true,
   })
 );
+
+app.options('*',cors());
 
 app.use(express.json());
 
@@ -33,7 +36,7 @@ mongoose
 
 app.post("/collection", async (req, res) => {
   try {
-    console.log("Requist body : ", req.body);
+    console.log("Request body : ", req.body);
     let data = await DataModel.create(req.body);
     res.status(201).json(data);
   } catch (err) {

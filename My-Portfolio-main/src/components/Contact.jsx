@@ -21,7 +21,7 @@ const Contact = () => {
     const BASE_URL = process.env.REACT_APP_SERVER_URL;
     console.log(BASE_URL)
     try {
-      let data = await axios.post(`${BASE_URL}`, inputData, {
+      let data = await axios.post(`${BASE_URL}/collection`, inputData, {
         withCredentials: true,
       });
       console.log("Response:" + data);
