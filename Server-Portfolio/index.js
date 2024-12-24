@@ -33,6 +33,10 @@ mongoose
     console.log("Connected to MongoDB");
   });
 
+  app.get('/data', async (req, res) => {
+    const data = await DataModel.find();
+    res.json(data);
+  })
 
 app.post("/collection", async (req, res) => {
   try {
