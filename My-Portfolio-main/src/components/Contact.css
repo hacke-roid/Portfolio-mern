@@ -1,173 +1,200 @@
 .contact-area {
-    margin-top: 110px;
-    /* border: 2px solid black; */
-    background-color: #f2f6f9;
-    /* width: 100%; */
-  }
-  
-  .background-banner{
-    /* width: 100%; */
-    /* background-image: url("./contact-banner.png"); */
-    /* background-repeat: no-repeat;
-    background-size: 100%; */
-  }
-  
-  .contact-banner {
-    /* border: 2px solid red; */
-    /* height: 250px; */
-    /* width: 100%;
-    
-    display: flex;
-    align-items: center; */
-    /* justify-content: center; */
-  }
-  
+  margin-top: 110px;
+  background-color: #f2f6f9;
+}
+
+.background-banner {
+  /* Add responsiveness if banner image is added later */
+}
+
+.contact-banner {
+  /* Adjustments for mobile not required as it has commented-out styles */
+}
+
+.details-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  margin: 20px; /* Adjust margins for smaller screens */
+  color: white;
+}
+
+.text-span > span {
+  color: orange;
+  font-size: 20px;
+  font-weight: bold !important;
+}
+
+.text-para > p {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.form-container {
+  position: relative;
+}
+
+.layout-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-form {
+  width: 90%; /* Adjust for smaller screens */
+  max-width: 800px; /* Ensure it doesn't exceed 800px */
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px; /* Reduced gap for smaller screens */
+  padding: 15px; /* Adjust padding */
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.col-lg-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Stacks inputs vertically on smaller screens */
+  gap: 15px; /* Adjust gap for better spacing */
+}
+
+.col-lg-1 input {
+  width: 100%;
+  height: 40px;
+  padding: 10px; /* Adjust padding */
+  outline: none;
+  font-size: 14px; /* Reduce font size for smaller screens */
+  border: 1px solid rgb(180, 180, 180);
+  border-radius: 10px;
+}
+
+.col-lg-2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Stacks inputs and select dropdown vertically */
+  gap: 15px; /* Adjust gap */
+}
+
+.col-lg-2 select, .col-lg-2 input {
+  width: 100%;
+  height: 40px;
+  outline: none;
+  font-size: 14px;
+  border: 1px solid rgb(180, 180, 180);
+  border-radius: 10px;
+}
+
+.col-lg-3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.col-lg-3 textarea {
+  width: 100%;
+  height: 120px; /* Adjust height for smaller screens */
+  padding: 15px;
+  outline: none;
+  font-size: 14px;
+  border: 1px solid rgb(180, 180, 180);
+  border-radius: 10px;
+}
+
+.col-lg-3 input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  outline: none;
+  font-size: 14px;
+  border: 1px solid rgb(180, 180, 180);
+  border-radius: 10px;
+}
+
+.btn_submit_detail {
+  height: 40px;
+  width: 100%;
+  max-width: 200px; /* Prevents button from stretching too wide */
+  border: none;
+  border-radius: 15px;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  font: 600 !important;
+  width: 100%; /* Make table fit within the viewport */
+}
+
+.td-lg-1 {
+  border-right: 2px solid grey;
+  padding-right: 20px;
+}
+
+/* --- Media Queries for Mobile Responsiveness --- */
+@media screen and (max-width: 768px) {
   .details-content {
-    /* border: 2px solid green; */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 30px;
-    margin-left: 150px;
-    margin-right: 150px;
-    color: white;
-  }
-  
-  .text-span > span {
-    color: orange;
-    font-size: 20px;
-    font-weight: bold !important;
-  }
-  
-  .text-para > p {
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-  }
-  
-  .form-container {
-    position: relative;
-  }
-  
-  .layout-container {
-    /* border: 2px solid purple; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .container-form {
-    /* border: 2px solid green; */
-    width: 800px;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 30px;
-    padding: 20px;
-    position: relative;
-    /* top: -50px; */
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-  
-  .col-lg-1 {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-  }
-  
-  .col-lg-1 input {
-    width: 380px;
-    height: 40px;
-    padding: 20px;
-    outline: none;
-    font-size: 15px;
-    border: 1px solid rgb(180, 180, 180);
-    border-radius: 10px;
-  }
-  
-  .col-lg-2 {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-  }
-  
-  .col-lg-2 select {
-    width: 380px;
-    height: 42px;
-    /* padding: 20px; */
-    outline: none;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    font-size: 15px;
-    border: 1px solid rgb(180, 180, 180);
-    border-radius: 10px;
-    background-color: white;
-  }
-  
-  .col-lg-2 input {
-    width: 380px;
-    height: 40px;
-    padding: 20px;
-    outline: none;
-    font-size: 15px;
-    border: 1px solid rgb(180, 180, 180);
-    border-radius: 10px;
-  }
-  
-  .col-lg-3 {
-    width: 100%;
-    display: grid;
+    margin-left: 20px;
+    margin-right: 20px;
     gap: 20px;
   }
-  
-  .col-lg-3 textarea {
-    width: 100%;
-    height: 150px;
-    padding: 20px;
-    outline: none;
-    font-size: 15px;
-    border: 1px solid rgb(180, 180, 180);
-    border-radius: 10px;
+
+  .container-form {
+    padding: 10px;
+    gap: 15px;
   }
-  
-  .col-lg-3 input {
-    width: 100%;
-    height: 40px;
-    padding: 20px;
-    outline: none;
-    font-size: 15px;
-    border: 1px solid rgb(180, 180, 180);
-    border-radius: 10px;
+
+  .col-lg-1, .col-lg-2 {
+    flex-direction: column; /* Stack inputs vertically */
+    gap: 10px;
   }
-  
+
+  .col-lg-1 input, .col-lg-2 select, .col-lg-2 input, .col-lg-3 textarea, .col-lg-3 input {
+    font-size: 13px; /* Reduce font size for smaller screens */
+    padding: 10px;
+  }
+
   .btn_submit_detail {
-    height: 40px;
-    width: 200px;
-    border: none;
-    border-radius: 15px;
+    width: 100%;
+    max-width: 150px; /* Smaller button width */
   }
-  
-  .table-container{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  
+}
+
+@media screen and (max-width: 480px) {
+  .details-content {
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 15px;
   }
-  
-  table{
-     font: 600 !important;
+
+  .container-form {
+    padding: 8px;
+    gap: 10px;
   }
-  
-  .td-lg-1{
-      border-right: 2px solid grey;
-      padding-right: 20px;
+
+  .col-lg-1 input, .col-lg-2 select, .col-lg-2 input, .col-lg-3 textarea, .col-lg-3 input {
+    font-size: 12px; /* Adjust font size for very small screens */
+    padding: 8px;
   }
-  
+
+  .btn_submit_detail {
+    width: 100%;
+    max-width: 120px;
+    font-size: 12px; /* Adjust button font size */
+  }
+
+  table {
+    font-size: 12px; /* Adjust table font size for small screens */
+  }
+}
