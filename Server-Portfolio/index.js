@@ -5,7 +5,6 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const DataModel = require("./Model/data.js");
 
-
 app.use(
   cors({
     origin: [
@@ -15,8 +14,6 @@ app.use(
     credentials: true,
   })
 );
-
-app.options('*',cors());
 
 app.use(express.json());
 
@@ -33,10 +30,10 @@ mongoose
     console.log("Connected to MongoDB");
   });
 
-  app.get('/data', async (req, res) => {
-    const data = await DataModel.find();
-    res.json(data);
-  })
+app.get("/data", async (req, res) => {
+  const data = await DataModel.find();
+  res.json(data);
+});
 
 app.post("/collection", async (req, res) => {
   try {
