@@ -31,7 +31,7 @@ mongoose
   });
 
 
-app.post("/", async (req, res) => {
+app.post("/collection", async (req, res) => {
   try {
     console.log("Requist body : ", req.body);
     let data = await DataModel.create(req.body);
