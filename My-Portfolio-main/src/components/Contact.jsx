@@ -14,20 +14,26 @@ const Contact = () => {
     message: "",
   });
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
     console.log(inputData);
-    axios.post(
-      "http://localhost:5500",
-      {
-        name,
-        email,
-        number,
-        subject,
-        message,
-      },
-      { withCredentials: true }
-    );
+    try {
+      let data = await axios.post("http://localhost:5500/", inputData, {
+        withCredentials: true,
+      });
+      // console.log("Response:" + data);
+      alert("Form submitted successfully");
+      setInputData({
+        name: "",
+        email: "",
+        topic: "",
+        number: "",
+        subject: "",
+        message: "",
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const handleInputChange = (e) => {
