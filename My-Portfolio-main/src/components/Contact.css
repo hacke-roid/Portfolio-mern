@@ -167,7 +167,7 @@ table {
 
   .btn_submit_detail {
     width: 100%;
-    max-width: 150px; /* Smaller button width */
+    /* max-width: 150px; Smaller button width */
   }
 }
 
@@ -189,8 +189,7 @@ table {
   }
 
   .btn_submit_detail {
-    width: 100%;
-    max-width: 120px;
+    width: 400px;
     font-size: 12px; /* Adjust button font size */
   }
 
