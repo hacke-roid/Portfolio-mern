@@ -18,10 +18,9 @@ const Contact = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     console.log(inputData);
-    const BASE_URL = process.env.REACT_APP_SERVER_URL;
-    console.log(BASE_URL)
+    
     try {
-      let data = await axios.post(`${BASE_URL}/collection`, inputData, {
+      let data = await axios.post(`https://deploy-mern-server-eight.vercel.app/collection`, inputData, {
         withCredentials: true,
       });
       console.log("Response:" + data);
